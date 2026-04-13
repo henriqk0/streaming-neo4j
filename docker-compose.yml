@@ -1,0 +1,17 @@
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j-db
+    restart: always
+    ports:
+      - "7474:7474"  # interface web
+      - "7687:7687"  # bolt (conexão da aplicação)
+    environment:
+      - NEO4J_AUTH=neo4j/senha123
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+
+volumes:
+  neo4j_data:
+  neo4j_logs:

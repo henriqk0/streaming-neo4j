@@ -1,0 +1,9 @@
+[project]
+name = "streaming-neo4j"
+version = "0.1.0"
+description = "provides pythohn code to generate a data model to streaming services"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "neo4j>=6.1.0",
+]
